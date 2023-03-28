@@ -5,7 +5,7 @@ const cors = require('cors');
 const bodyParser=require('body-parser')
 const fileRoutes = require('./routes/imgRoutes.ts')
 const dotenv=require('dotenv')
-export const app = express();
+ const app = express();
 
 dotenv.config()
 
@@ -30,3 +30,4 @@ app.listen(port, () =>
   console.log(`Running Backend on port ${port}.`)
 
 );
+export default app;
