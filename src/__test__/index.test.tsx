@@ -2,7 +2,8 @@ import request from "supertest";
 import path from "path";
 // const request = require("supertest");
 import fs from "fs";
-import { app } from "../server";
+// import { app } from "../../index";
+import app from "../..";
 // const app = require("../server");
 describe("Testing some apis", () => {
 	test("Fetching single file from table", async () => {
