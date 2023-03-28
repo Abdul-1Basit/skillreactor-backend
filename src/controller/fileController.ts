@@ -4,7 +4,11 @@ import { Request, Response } from 'express';
 // import fileUpload, { UploadedFile } from 'express-fileupload';
 // import { blob } from 'stream/consumers';
 import { uploadImage, addImageToTable, getAllFiles, fileType ,getSearchBasedFiles,getSpecificImageFromTable} from '../../firebase'
-
+interface fileList{
+    objectList: fileType[];
+    kindofTransformation: string;
+    reducedSize: string;
+}
 
 const addImage = async (req: Request, res: Response) => {
     // addImage,getAllImages,getSpecificImage,searchImages
@@ -13,6 +17,8 @@ const addImage = async (req: Request, res: Response) => {
     // console.log("file", req.file)
     // return
     if (!req.file) {
+        // req.files
+        
      return   res.status(400).send('Please add a file');
  }
     const receivedFile = req.file;
