@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // routes
 app.use('/api/file',fileRoutes);
 app.get('/', (req: Request, res: Response) => {
-  res.send('Application works!');
+  res.send('Application works !');
   // console.log('request recieved',req.files)
 });
 const port = process.env.PORT || 3000;
